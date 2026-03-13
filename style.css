@@ -172,9 +172,3 @@ a img {
 	width: 5vh;
 	height: auto;
 }
-
-@media (max-width: 1000px) {
-	.hobbies-container {
-		flex-direction: column;
-	}
-}

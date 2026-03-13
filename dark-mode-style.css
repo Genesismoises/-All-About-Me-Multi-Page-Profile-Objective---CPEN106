@@ -169,8 +169,3 @@ a img:active {
 
 }
 
-@media (max-width: 1000px) {
-	.hobbies-container {
-		flex-direction: column;
-	}
-}
