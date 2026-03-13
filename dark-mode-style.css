@@ -1,0 +1,176 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body { 	/*body, styles for the whole page*/
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: #1E1A18; 
+	color: #EDE0D4;
+	font-family: verdana;
+	text-align: center;
+	
+
+	}
+p::selection, em::selection, h1::selection, h2::selection {
+	color: white;
+	background-color: #EDE0D4;;
+
+}
+
+.mode-button {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border-radius: 50%;
+	box-shadow: 0 5px 100px rgba(253, 253, 253, 0.5);
+	transition: box-shadow 0.5s ease;
+	background-color: rgba(203, 179, 179, 0.5);
+	border: none;
+	}
+.mode-button:hover {
+	box-shadow: 0 5px 50px rgb(255, 255, 255, 1);
+
+}
+
+
+main {	/*this is for the content div, which contains all the content of the page except the footer*/
+	flex: 1; /*makes the content div take up all available space, pushing the footer to the bottom*/
+	}
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 5vh;
+	}
+h1, h2 {
+	color: #EDE0D4
+	}
+	
+#heading { 
+	font-size: 4em; /* makes the header 4x larger*/
+	}
+#name {
+	margin-top: 1px;
+	font-size: 2em;
+}
+
+#name-tag {
+	display: flex;
+	flex-direction: row;
+}
+
+.container img {
+	width: 10vw;
+	min-width: 200px;
+	height: auto;
+	border-radius: 10%; /*makes box edges round*/
+	}
+	
+.container {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	justify-content: center;
+	
+	}	
+
+ul { 
+	list-style-type: none; /* removes the ugly dots in unordered list*/
+	}
+		
+.hobbies-container{
+	display: flex; /* makes objects inside the class display horizontally*/
+	flex-wrap: wrap;
+	gap: 30px; 
+	justify-content: center;
+	margin-bottom: 50px;
+
+	}
+	
+.box {
+	display: flex;
+	flex-direction: column;
+	align-items: center; ;
+	background-color: #2A2421;
+	width:15vw;
+	min-height: 350px;
+	min-width: 350px;
+	max-height: 400px;
+	max-width: 400px;
+	height: 15vw; /*makes the height adjust automatically with its width*/
+	border-radius: 10%;
+	font-size: clamp(14px, 1vw, 28px);
+	padding: 10px;
+	box-shadow:
+		0 12px 30px rgba(0, 0, 0, 0.6),
+		0 0 12px rgba(255, 200, 150, 0.05);
+	transition: transform 0.25 ease, box-shawdow 0.25 ease;
+	}
+.box:hover{
+	transform: translateY(-2px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75),
+			0 0 18px rgba(255, 180, 120, 0.08);;
+	
+}
+
+.box img {
+	width: 5vh;
+	height: auto;
+
+	}
+.box p {
+	margin-top: 50px;
+	}
+
+					
+
+.footer-container {	/*styling for footer starts here*/
+	background-color: #181412;
+	color: #EDE0D4;
+	border-radius: 50px 0 0 0;
+	box-shadow: 0 -8px 20px rgba(237, 224, 212, 0.25);
+	}
+	
+.footer-container p {
+	padding-top: 2.5px;
+	}
+.footer-icons, .icon-label {
+	display: flex;
+	gap: 20px;
+	justify-content: center
+	}
+.icon-label {
+	margin-top: -15px; /*pulls the icon closer to the label*/
+	}
+.footer-note {		/*this one's for my very cool footer note :P*/
+	font-size: 0.5em;	
+	padding-bottom: 5px;
+	}
+
+a img {
+	border-radius: 100%;
+}
+a img:hover {
+	transform: scale(1.2);
+	transition: transform 0.3s ease;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* adds a shadow effect on hover */
+}
+
+a img:active {
+	transform: scale(1);
+	transition: transform 0.1s ease;
+	}
+
+.mode-button img {
+	width: 5vh;
+	height: auto;
+
+}
+
+@media (max-width: 1000px) {
+	.hobbies-container {
+		flex-direction: column;
+	}
+}
